@@ -306,7 +306,13 @@ a {
 ========================= */
 
 @media (max-width: 800px) {
+.projects-grid {
+    grid-template-columns: 1fr;
+}
 
+.projects-section {
+    padding: 65px 0;
+}
     .nav-links {
         display: none;
     }
