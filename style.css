@@ -175,7 +175,132 @@ a {
     padding: 10px;
 }
 
+/* =========================
+   PROJECTS SECTION
+========================= */
 
+.projects-section {
+    padding: 90px 0;
+    background: #ffffff;
+}
+
+.section-heading {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.section-heading h2 {
+    font-size: 32px;
+    color: #102235;
+    letter-spacing: 0.5px;
+}
+
+.section-line {
+    width: 55px;
+    height: 3px;
+    background: #1689e8;
+    margin: 12px auto 0;
+}
+
+
+/* PROJECT GRID */
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 28px;
+}
+
+
+/* PROJECT CARD */
+
+.project-card {
+    background: #ffffff;
+    border: 1px solid #dce5ed;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.25s ease,
+                box-shadow 0.25s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 15px 35px rgba(10, 35, 55, 0.12);
+}
+
+
+/* PROJECT IMAGE */
+
+.project-image {
+    height: 220px;
+    background: #071a2b;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.project-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    padding: 12px;
+}
+
+
+/* TEMPORARY PLACEHOLDER */
+
+.project-placeholder {
+    height: 220px;
+    background: #0c2235;
+    color: #549cd8;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 32px;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+
+/* PROJECT TEXT */
+
+.project-content {
+    padding: 24px;
+}
+
+.project-category {
+    display: block;
+    color: #1689e8;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+}
+
+.project-content h3 {
+    font-size: 21px;
+    line-height: 1.35;
+    color: #102235;
+    margin-bottom: 14px;
+}
+
+.project-content p {
+    font-size: 15px;
+    line-height: 1.65;
+    color: #586776;
+    margin-bottom: 22px;
+}
+
+.project-link {
+    color: #1689e8;
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.project-link:hover {
+    color: #086cb9;
+}
 /* =========================
    MOBILE
 ========================= */
