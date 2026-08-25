@@ -5,43 +5,61 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>
-        45 nm IC Design & Layout | Quoc Bui Anh
-    </title>
+    <title>45 nm IC Design & Layout | Quoc Bui Anh</title>
 
     <link rel="stylesheet" href="../style.css">
 </head>
 
+
 <body>
 
-    <!-- NAVBAR -->
+    <!-- =========================
+         NAVBAR
+    ========================== -->
 
     <nav class="navbar">
+
         <div class="container nav-container">
 
-            <a href="../index.html" class="logo">
+            <a href="/" class="logo">
                 QB
             </a>
 
             <ul class="nav-links">
-                <li><a href="../index.html">HOME</a></li>
-                <li><a href="../index.html#projects">PROJECTS</a></li>
-                <li><a href="../index.html#skills">SKILLS</a></li>
-                <li><a href="../index.html#contact">CONTACT</a></li>
+
+                <li>
+                    <a href="/">HOME</a>
+                </li>
+
+                <li>
+                    <a href="/#projects">PROJECTS</a>
+                </li>
+
+                <li>
+                    <a href="/#skills">SKILLS</a>
+                </li>
+
+                <li>
+                    <a href="/#contact">CONTACT</a>
+                </li>
+
             </ul>
 
         </div>
+
     </nav>
 
 
-    <!-- PROJECT HEADER -->
+    <!-- =========================
+         PROJECT HERO
+    ========================== -->
 
-    <section class="project-detail-hero">
+    <section class="case-hero">
 
         <div class="container">
 
-            <span class="project-detail-category">
-                IC DESIGN & LAYOUT
+            <span class="case-category">
+                IC DESIGN & CUSTOM LAYOUT
             </span>
 
             <h1>
@@ -49,61 +67,18 @@
             </h1>
 
             <p>
-                Transistor-level circuit design, custom physical layout,
-                functional verification, and DRC/LVS verification of
-                digital building blocks, SRAM, and TCAM.
+                Transistor-level schematic design, custom physical layout,
+                and physical verification of selected digital cells using
+                Cadence Virtuoso and Cadence PVS.
             </p>
 
-        </div>
+            <div class="case-tags">
 
-    </section>
-
-
-    <!-- OVERVIEW -->
-
-    <section class="project-detail-section">
-
-        <div class="container project-detail-grid">
-
-            <div>
-
-                <h2>Overview</h2>
-
-                <p>
-                    This project focuses on transistor-level schematic
-                    design and custom physical layout using a 45 nm PDK.
-                    The work includes digital building blocks,
-                    a multi-stage tapered buffer, a custom D flip-flop,
-                    SRAM, and TCAM structures.
-                </p>
-
-            </div>
-
-
-            <div class="project-info-card">
-
-                <h3>Project Information</h3>
-
-                <p>
-                    <strong>Technology:</strong>
-                    45 nm PDK
-                </p>
-
-                <p>
-                    <strong>Design:</strong>
-                    Transistor-level & Custom Layout
-                </p>
-
-                <p>
-                    <strong>Verification:</strong>
-                    Functional Simulation, DRC, LVS
-                </p>
-
-                <p>
-                    <strong>Tools:</strong>
-                    Cadence Virtuoso, Siemens Calibre,
-                    Xcelium, Genus
-                </p>
+                <span>45 nm PDK</span>
+                <span>Cadence Virtuoso</span>
+                <span>Cadence PVS</span>
+                <span>DRC</span>
+                <span>LVS</span>
 
             </div>
 
@@ -112,47 +87,473 @@
     </section>
 
 
-    <!-- DESIGN FLOW -->
+    <!-- =========================
+         OVERVIEW
+    ========================== -->
 
-    <section class="project-detail-section light-section">
+    <section class="case-section">
 
         <div class="container">
 
-            <h2>Design Flow</h2>
+            <div class="case-section-title">
 
-            <div class="design-flow">
+                <span>PROJECT OVERVIEW</span>
 
-                <div class="flow-step">
+                <h2>
+                    From transistor-level schematic to verified physical layout
+                </h2>
+
+                <p>
+                    This project focuses on custom IC implementation using a
+                    45 nm process design kit. The selected work presented here
+                    includes a four-stage tapered buffer and a custom
+                    transistor-level D flip-flop.
+                </p>
+
+                <p>
+                    For both cells, the design flow consisted of schematic
+                    design, custom physical layout, Design Rule Checking (DRC),
+                    and Layout Versus Schematic (LVS) verification.
+                </p>
+
+            </div>
+
+
+            <div class="case-flow">
+
+                <div class="case-flow-step">
                     <span>01</span>
-                    <h3>Schematic</h3>
-                    <p>Transistor-level circuit design.</p>
+                    <strong>Schematic</strong>
+                    <small>Transistor-level design</small>
                 </div>
 
-                <div class="flow-step">
+                <div class="case-arrow">→</div>
+
+                <div class="case-flow-step">
                     <span>02</span>
-                    <h3>Simulation</h3>
-                    <p>Functional circuit verification.</p>
+                    <strong>Layout</strong>
+                    <small>Custom physical implementation</small>
                 </div>
 
-                <div class="flow-step">
+                <div class="case-arrow">→</div>
+
+                <div class="case-flow-step">
                     <span>03</span>
-                    <h3>Layout</h3>
-                    <p>Custom physical implementation.</p>
+                    <strong>DRC</strong>
+                    <small>Design-rule verification</small>
                 </div>
 
-                <div class="flow-step">
+                <div class="case-arrow">→</div>
+
+                <div class="case-flow-step">
                     <span>04</span>
-                    <h3>DRC</h3>
-                    <p>Design-rule verification.</p>
-                </div>
-
-                <div class="flow-step">
-                    <span>05</span>
-                    <h3>LVS</h3>
-                    <p>Schematic-to-layout verification.</p>
+                    <strong>LVS</strong>
+                    <small>Schematic-layout comparison</small>
                 </div>
 
             </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         BUFFER
+    ========================== -->
+
+    <section class="case-section case-section-light" id="buffer">
+
+        <div class="container">
+
+            <div class="design-header">
+
+                <div>
+
+                    <span class="design-number">
+                        DESIGN 01
+                    </span>
+
+                    <h2>
+                        Multi-Stage Tapered Buffer
+                    </h2>
+
+                </div>
+
+                <div class="verification-badges">
+
+                    <span class="pass-badge">
+                        ✓ DRC CLEAN
+                    </span>
+
+                    <span class="pass-badge">
+                        ✓ LVS MATCHED
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <p class="design-intro">
+
+                A four-stage tapered buffer was designed at transistor level
+                with progressively increased device multiplicity
+                (1× → 3× → 9× → 30×) to increase output-driving capability.
+                A three-row physical structure and multi-layer routing strategy
+                were used during custom layout implementation.
+
+            </p>
+
+
+            <!-- BUFFER SCHEMATIC -->
+
+            <div class="design-step">
+
+                <div class="design-step-heading">
+
+                    <span>01</span>
+
+                    <div>
+                        <h3>Schematic Design</h3>
+
+                        <p>
+                            Four-stage tapered architecture with progressively
+                            increased transistor multiplicity toward the output
+                            stage.
+                        </p>
+                    </div>
+
+                </div>
+
+
+                <figure class="technical-figure">
+
+                    <img
+                        src="/assets/images/buffer-schematic.png"
+                        alt="Four-stage tapered buffer transistor-level schematic"
+                        loading="lazy"
+                    >
+
+                    <figcaption>
+                        Four-stage tapered buffer schematic and layout planning
+                        strategy.
+                    </figcaption>
+
+                </figure>
+
+            </div>
+
+
+            <!-- BUFFER LAYOUT -->
+
+            <div class="design-step">
+
+                <div class="design-step-heading">
+
+                    <span>02</span>
+
+                    <div>
+                        <h3>Physical Layout</h3>
+
+                        <p>
+                            Custom physical implementation showing device
+                            organization, power distribution, and signal routing
+                            across the designed buffer stages.
+                        </p>
+                    </div>
+
+                </div>
+
+
+                <figure class="technical-figure">
+
+                    <img
+                        src="/assets/images/buffer-layout.png"
+                        alt="Custom physical layout of four-stage tapered buffer"
+                        loading="lazy"
+                    >
+
+                    <figcaption>
+                        Custom physical layout and routing overview of the
+                        multi-stage tapered buffer.
+                    </figcaption>
+
+                </figure>
+
+            </div>
+
+
+            <!-- BUFFER VERIFICATION -->
+
+            <div class="design-step">
+
+                <div class="design-step-heading">
+
+                    <span>03</span>
+
+                    <div>
+                        <h3>Physical Verification</h3>
+
+                        <p>
+                            Cadence PVS was used for Design Rule Checking and
+                            Layout Versus Schematic verification.
+                        </p>
+                    </div>
+
+                </div>
+
+
+                <figure class="technical-figure">
+
+                    <img
+                        src="/assets/images/buffer-verification.png"
+                        alt="Buffer DRC and LVS verification results using Cadence PVS"
+                        loading="lazy"
+                    >
+
+                    <figcaption>
+                        Physical verification results:
+                        DRC clean with zero violations and successful LVS match.
+                    </figcaption>
+
+                </figure>
+
+
+                <div class="result-summary">
+
+                    <div>
+                        <span>DRC</span>
+                        <strong>0 Violations</strong>
+                    </div>
+
+                    <div>
+                        <span>LVS</span>
+                        <strong>Matched</strong>
+                    </div>
+
+                    <div>
+                        <span>Extraction</span>
+                        <strong>Clean</strong>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         DFF
+    ========================== -->
+
+    <section class="case-section" id="dff">
+
+        <div class="container">
+
+            <div class="design-header">
+
+                <div>
+
+                    <span class="design-number">
+                        DESIGN 02
+                    </span>
+
+                    <h2>
+                        Custom D Flip-Flop
+                    </h2>
+
+                </div>
+
+
+                <div class="verification-badges">
+
+                    <span class="pass-badge">
+                        ✓ DRC CLEAN
+                    </span>
+
+                    <span class="pass-badge">
+                        ✓ LVS MATCHED
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <p class="design-intro">
+
+                A custom D flip-flop was implemented at transistor level
+                and translated into a compact physical layout.
+                Device placement and routing were arranged with emphasis
+                on source/drain sharing and physical layout efficiency.
+
+            </p>
+
+
+            <!-- DFF SCHEMATIC -->
+
+            <div class="design-step">
+
+                <div class="design-step-heading">
+
+                    <span>01</span>
+
+                    <div>
+
+                        <h3>Schematic Design</h3>
+
+                        <p>
+                            Transistor-level implementation of the custom
+                            D flip-flop used as the reference circuit for
+                            physical layout development.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <figure class="technical-figure">
+
+                    <img
+                        src="/assets/images/dff-schematic.png"
+                        alt="Custom transistor-level D flip-flop schematic"
+                        loading="lazy"
+                    >
+
+                    <figcaption>
+                        Transistor-level schematic and layout strategy of
+                        the custom D flip-flop.
+                    </figcaption>
+
+                </figure>
+
+            </div>
+
+
+            <!-- DFF LAYOUT -->
+
+            <div class="design-step">
+
+                <div class="design-step-heading">
+
+                    <span>02</span>
+
+                    <div>
+
+                        <h3>Physical Layout</h3>
+
+                        <p>
+                            Custom device placement and multi-layer routing
+                            were implemented in Cadence Virtuoso.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <figure class="technical-figure">
+
+                    <img
+                        src="/assets/images/dff-layout.png"
+                        alt="Custom physical layout of D flip-flop"
+                        loading="lazy"
+                    >
+
+                    <figcaption>
+                        Custom D flip-flop physical layout and routing overview.
+                    </figcaption>
+
+                </figure>
+
+            </div>
+
+
+            <!-- DFF VERIFICATION -->
+
+            <div class="design-step">
+
+                <div class="design-step-heading">
+
+                    <span>03</span>
+
+                    <div>
+
+                        <h3>Physical Verification</h3>
+
+                        <p>
+                            The completed layout was verified using Cadence PVS
+                            to ensure compliance with design rules and
+                            connectivity consistency with the original schematic.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <figure class="technical-figure">
+
+                    <img
+                        src="/assets/images/dff-verification.png"
+                        alt="D flip-flop DRC and LVS verification results using Cadence PVS"
+                        loading="lazy"
+                    >
+
+                    <figcaption>
+                        Physical verification results:
+                        zero DRC violations and successful LVS matching.
+                    </figcaption>
+
+                </figure>
+
+
+                <div class="result-summary">
+
+                    <div>
+                        <span>DRC</span>
+                        <strong>0 Violations</strong>
+                    </div>
+
+                    <div>
+                        <span>LVS</span>
+                        <strong>Matched</strong>
+                    </div>
+
+                    <div>
+                        <span>Extraction</span>
+                        <strong>Clean</strong>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         BACK TO PROJECTS
+    ========================== -->
+
+    <section class="case-footer">
+
+        <div class="container">
+
+            <p>
+                More project work will be added as development continues.
+            </p>
+
+            <a href="/#projects">
+                ← BACK TO PROJECTS
+            </a>
 
         </div>
 
