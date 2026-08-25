@@ -462,3 +462,328 @@ a {
         min-height: 230px;
     }
 }
+/* =========================================
+   45NM PROJECT DETAIL PAGE
+========================================= */
+
+.case-hero {
+    background: linear-gradient(
+        120deg,
+        #071a2b 0%,
+        #102b40 100%
+    );
+
+    color: white;
+    padding: 90px 0 80px;
+}
+
+.case-category {
+    display: block;
+    color: #2f9cf4;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    margin-bottom: 14px;
+}
+
+.case-hero h1 {
+    max-width: 900px;
+    font-size: 46px;
+    line-height: 1.15;
+    margin-bottom: 20px;
+}
+
+.case-hero p {
+    max-width: 780px;
+    color: #ccd8e2;
+    font-size: 17px;
+    line-height: 1.75;
+}
+
+.case-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 28px;
+}
+
+.case-tags span {
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    border-radius: 20px;
+    padding: 7px 14px;
+    font-size: 12px;
+    color: #d6e2ec;
+}
+
+
+/* SECTIONS */
+
+.case-section {
+    padding: 85px 0;
+    background: #ffffff;
+}
+
+.case-section-light {
+    background: #f5f8fb;
+}
+
+.case-section-title {
+    max-width: 850px;
+}
+
+.case-section-title > span {
+    color: #1689e8;
+    font-size: 12px;
+    letter-spacing: 1.5px;
+    font-weight: 700;
+}
+
+.case-section-title h2 {
+    color: #102235;
+    font-size: 34px;
+    line-height: 1.3;
+    margin: 10px 0 20px;
+}
+
+.case-section-title p {
+    color: #586776;
+    font-size: 16px;
+    line-height: 1.8;
+    margin-bottom: 12px;
+}
+
+
+/* FLOW */
+
+.case-flow {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 45px;
+}
+
+.case-flow-step {
+    flex: 1;
+    min-height: 130px;
+    padding: 22px;
+
+    border: 1px solid #dce5ed;
+    border-radius: 8px;
+    background: #ffffff;
+}
+
+.case-flow-step span {
+    color: #1689e8;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.case-flow-step strong {
+    display: block;
+    color: #102235;
+    font-size: 18px;
+    margin: 6px 0;
+}
+
+.case-flow-step small {
+    color: #687786;
+}
+
+.case-arrow {
+    padding: 0 14px;
+    color: #1689e8;
+    font-size: 22px;
+}
+
+
+/* DESIGN HEADER */
+
+.design-header {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 30px;
+
+    padding-bottom: 22px;
+    border-bottom: 1px solid #dce5ed;
+}
+
+.design-number {
+    color: #1689e8;
+    font-size: 12px;
+    letter-spacing: 1.5px;
+    font-weight: 700;
+}
+
+.design-header h2 {
+    color: #102235;
+    font-size: 36px;
+    margin-top: 5px;
+}
+
+.design-intro {
+    max-width: 900px;
+    margin-top: 25px;
+
+    color: #586776;
+    font-size: 16px;
+    line-height: 1.8;
+}
+
+
+/* PASS BADGES */
+
+.verification-badges {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+.pass-badge {
+    background: #eaf7ef;
+    border: 1px solid #bee6cb;
+    color: #18763a;
+
+    padding: 8px 13px;
+    border-radius: 20px;
+
+    font-size: 12px;
+    font-weight: 700;
+}
+
+
+/* DESIGN STEPS */
+
+.design-step {
+    margin-top: 70px;
+}
+
+.design-step-heading {
+    display: flex;
+    gap: 18px;
+    align-items: flex-start;
+
+    max-width: 850px;
+    margin-bottom: 24px;
+}
+
+.design-step-heading > span {
+    min-width: 42px;
+    height: 42px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: #1689e8;
+    color: white;
+
+    border-radius: 50%;
+
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.design-step-heading h3 {
+    color: #102235;
+    font-size: 24px;
+    margin-bottom: 5px;
+}
+
+.design-step-heading p {
+    color: #667685;
+    font-size: 15px;
+    line-height: 1.7;
+}
+
+
+/* TECHNICAL IMAGE */
+
+.technical-figure {
+    background: white;
+    border: 1px solid #dce5ed;
+    border-radius: 9px;
+    overflow: hidden;
+
+    box-shadow:
+        0 8px 24px rgba(20, 45, 65, 0.06);
+}
+
+.technical-figure img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.technical-figure figcaption {
+    padding: 14px 18px;
+
+    border-top: 1px solid #e7edf2;
+
+    color: #687786;
+    font-size: 13px;
+    line-height: 1.5;
+}
+
+
+/* RESULT SUMMARY */
+
+.result-summary {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+
+    margin-top: 18px;
+
+    border: 1px solid #dce5ed;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.result-summary div {
+    padding: 18px 20px;
+    background: white;
+
+    border-right: 1px solid #dce5ed;
+}
+
+.result-summary div:last-child {
+    border-right: none;
+}
+
+.result-summary span {
+    display: block;
+
+    color: #7b8996;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1px;
+
+    margin-bottom: 4px;
+}
+
+.result-summary strong {
+    color: #18763a;
+    font-size: 17px;
+}
+
+
+/* PROJECT FOOTER */
+
+.case-footer {
+    background: #071a2b;
+    color: white;
+
+    padding: 45px 0;
+    text-align: center;
+}
+
+.case-footer p {
+    color: #9eb0bf;
+    margin-bottom: 12px;
+}
+
+.case-footer a {
+    color: #2f9cf4;
+    font-weight: 700;
+    font-size: 13px;
+}
