@@ -787,3 +787,45 @@ a {
     font-weight: 700;
     font-size: 13px;
 }
+@media (max-width: 800px) {
+
+    .case-hero {
+        padding: 65px 0;
+    }
+
+    .case-hero h1 {
+        font-size: 34px;
+    }
+
+    .case-flow {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 10px;
+    }
+
+    .case-arrow {
+        text-align: center;
+        transform: rotate(90deg);
+    }
+
+    .design-header {
+        flex-direction: column;
+    }
+
+    .design-header h2 {
+        font-size: 29px;
+    }
+
+    .result-summary {
+        grid-template-columns: 1fr;
+    }
+
+    .result-summary div {
+        border-right: none;
+        border-bottom: 1px solid #dce5ed;
+    }
+
+    .result-summary div:last-child {
+        border-bottom: none;
+    }
+}
