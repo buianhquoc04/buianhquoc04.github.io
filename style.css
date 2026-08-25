@@ -302,10 +302,131 @@ a {
     color: #086cb9;
 }
 /* =========================
+   PROJECT DETAIL PAGE
+========================= */
+
+.project-detail-hero {
+    background: #0b2032;
+    color: white;
+    padding: 90px 0 70px;
+}
+
+.project-detail-category {
+    display: block;
+    color: #2f9cf4;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    margin-bottom: 14px;
+}
+
+.project-detail-hero h1 {
+    font-size: 42px;
+    line-height: 1.2;
+    margin-bottom: 18px;
+}
+
+.project-detail-hero p {
+    max-width: 760px;
+    color: #c8d4df;
+    font-size: 17px;
+}
+
+
+.project-detail-section {
+    padding: 75px 0;
+}
+
+.project-detail-section h2 {
+    font-size: 30px;
+    color: #102235;
+    margin-bottom: 24px;
+}
+
+
+.project-detail-grid {
+    display: grid;
+    grid-template-columns: 1.4fr 0.8fr;
+    gap: 60px;
+    align-items: start;
+}
+
+.project-detail-grid p {
+    font-size: 16px;
+    color: #586776;
+    line-height: 1.8;
+}
+
+
+.project-info-card {
+    border: 1px solid #dce5ed;
+    border-radius: 8px;
+    padding: 28px;
+    background: #f8fafc;
+}
+
+.project-info-card h3 {
+    margin-bottom: 20px;
+    color: #102235;
+}
+
+.project-info-card p {
+    margin-bottom: 12px;
+    font-size: 14px;
+}
+
+
+.light-section {
+    background: #f7f9fb;
+}
+
+
+/* DESIGN FLOW */
+
+.design-flow {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 20px;
+}
+
+.flow-step {
+    background: white;
+    border: 1px solid #dce5ed;
+    border-radius: 8px;
+    padding: 22px;
+}
+
+.flow-step span {
+    color: #1689e8;
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.flow-step h3 {
+    margin: 8px 0;
+    color: #102235;
+}
+
+.flow-step p {
+    font-size: 14px;
+    color: #657583;
+}
+/* =========================
    MOBILE
 ========================= */
 
 @media (max-width: 800px) {
+   .project-detail-grid {
+    grid-template-columns: 1fr;
+}
+
+.design-flow {
+    grid-template-columns: 1fr;
+}
+
+.project-detail-hero h1 {
+    font-size: 32px;
+}
 .projects-grid {
     grid-template-columns: 1fr;
 }
