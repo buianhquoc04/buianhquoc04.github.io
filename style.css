@@ -307,6 +307,12 @@ a {
 
 .project-detail-hero {
     background: #0b2032;
+  <a
+    href="/projects/layout45nm.html"
+    class="project-link"
+>
+    VIEW PROJECT →
+</a>
     color: white;
     padding: 90px 0 70px;
 }
