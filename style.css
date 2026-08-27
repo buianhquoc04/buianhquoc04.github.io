@@ -829,3 +829,58 @@ a {
         border-bottom: none;
     }
 }
+/* =========================================
+   ADDLL PAGE
+========================================= */
+
+.addll-summary {
+    grid-template-columns: repeat(4, 1fr);
+    margin-top: 40px;
+}
+
+.engineering-note {
+    margin-top: 28px;
+    padding: 24px 28px;
+
+    border-left: 4px solid #1689e8;
+    background: #eef6fc;
+
+    border-radius: 0 8px 8px 0;
+}
+
+.engineering-note strong {
+    display: block;
+
+    color: #102235;
+    font-size: 15px;
+
+    margin-bottom: 7px;
+}
+
+.engineering-note p {
+    color: #586776;
+
+    font-size: 14px;
+    line-height: 1.7;
+}
+
+.current-work-tags {
+    margin-top: 28px;
+}
+
+.current-work-tags span {
+    color: #1689e8;
+    border-color: #b8d9f4;
+    background: #f3f9fe;
+}
+
+
+/* MOBILE */
+
+@media (max-width: 800px) {
+
+    .addll-summary {
+        grid-template-columns: 1fr;
+    }
+
+}
