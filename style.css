@@ -1106,3 +1106,104 @@ a {
     }
 
 }
+/* =========================================
+   TECHNICAL SKILLS
+========================================= */
+
+.skills-section {
+    padding: 85px 0;
+    background: #f7f9fb;
+}
+
+.skills-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, minmax(0, 1fr));
+
+    gap: 24px;
+
+    margin-top: 35px;
+}
+
+.skill-card {
+    background: #ffffff;
+
+    border: 1px solid #dce5ed;
+
+    border-radius: 10px;
+
+    padding: 28px 30px;
+
+    box-shadow:
+        0 6px 20px rgba(20, 45, 65, 0.05);
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.skill-card:hover {
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 10px 28px rgba(20, 45, 65, 0.09);
+}
+
+.skill-card h3 {
+    color: #102235;
+
+    font-size: 20px;
+
+    margin-bottom: 18px;
+}
+
+.skill-card p {
+    position: relative;
+
+    color: #586776;
+
+    font-size: 15px;
+
+    line-height: 1.6;
+
+    padding-left: 15px;
+
+    margin-bottom: 8px;
+}
+
+.skill-card p:last-child {
+    margin-bottom: 0;
+}
+
+.skill-card p::before {
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+
+    top: 10px;
+
+    width: 5px;
+    height: 5px;
+
+    border-radius: 50%;
+
+    background: #1689e8;
+}
+
+
+/* MOBILE */
+
+@media (max-width: 800px) {
+
+    .skills-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .skill-card {
+        padding: 24px;
+    }
+
+}
