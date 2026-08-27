@@ -1,0 +1,670 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>
+        Galois LFSR PRNG | Quoc Bui Anh
+    </title>
+
+    <meta
+        name="description"
+        content="Polynomial-modulated Galois LFSR PRNG with RTL design, functional verification, logic synthesis, and PPA analysis."
+    >
+
+    <link
+        rel="stylesheet"
+        href="/style.css"
+    >
+</head>
+
+
+<body>
+
+
+<!-- ========================================
+     NAVBAR
+========================================= -->
+
+<nav class="navbar">
+
+    <div class="container nav-container">
+
+        <a href="/" class="logo">
+            QB
+        </a>
+
+        <ul class="nav-links">
+
+            <li>
+                <a href="/">HOME</a>
+            </li>
+
+            <li>
+                <a href="/#projects">PROJECTS</a>
+            </li>
+
+            <li>
+                <a href="/#skills">SKILLS</a>
+            </li>
+
+            <li>
+                <a href="/#contact">CONTACT</a>
+            </li>
+
+        </ul>
+
+    </div>
+
+</nav>
+
+
+
+<!-- ========================================
+     HERO
+========================================= -->
+
+<section class="case-hero">
+
+    <div class="container">
+
+        <span class="case-category">
+            RTL & ASIC DESIGN
+        </span>
+
+        <h1>
+            Polynomial-Modulated Galois LFSR PRNG
+        </h1>
+
+        <p>
+            A configurable pseudo-random number generator
+            based on a Galois LFSR architecture with dynamic
+            primitive-polynomial selection, functional
+            verification, and ASIC-oriented logic synthesis.
+        </p>
+
+
+        <div class="case-tags">
+
+            <span>Verilog</span>
+            <span>Galois LFSR</span>
+            <span>Sky130</span>
+            <span>Cadence Genus</span>
+            <span>Functional Verification</span>
+            <span>NIST SP 800-22</span>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- ========================================
+     OVERVIEW
+========================================= -->
+
+<section class="case-section">
+
+    <div class="container">
+
+        <div class="case-section-title">
+
+            <span>
+                PROJECT OVERVIEW
+            </span>
+
+            <h2>
+                Configurable pseudo-random sequence generation
+            </h2>
+
+            <p>
+                This project explores a Galois LFSR-based
+                pseudo-random number generator with a
+                polynomial-selection mechanism that dynamically
+                switches between multiple primitive polynomials.
+            </p>
+
+            <p>
+                The design was implemented at RTL level,
+                functionally verified, statistically evaluated,
+                and synthesized using the Sky130 standard-cell
+                technology library.
+            </p>
+
+        </div>
+
+
+        <div class="result-summary lfsr-summary">
+
+            <div>
+                <span>IMPLEMENTATIONS</span>
+                <strong>4 / 8 / 16-bit</strong>
+            </div>
+
+            <div>
+                <span>PROCESS</span>
+                <strong>Sky130 130 nm</strong>
+            </div>
+
+            <div>
+                <span>MAX FMAX</span>
+                <strong>1.0 GHz</strong>
+            </div>
+
+            <div>
+                <span>SYNTHESIS</span>
+                <strong>Cadence Genus</strong>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- ========================================
+     01 ARCHITECTURE
+========================================= -->
+
+<section class="case-section case-section-light">
+
+    <div class="container">
+
+        <div class="design-header">
+
+            <div>
+
+                <span class="design-number">
+                    01 — ARCHITECTURE
+                </span>
+
+                <h2>
+                    Proposed PRNG Architecture
+                </h2>
+
+            </div>
+
+        </div>
+
+
+        <p class="design-intro">
+
+            The proposed PRNG combines a Galois LFSR with
+            primitive-polynomial selection logic consisting
+            of a comparator, counter, and multiplexer.
+
+            When the generated LFSR sequence returns to
+            the initial seed, the comparator detects the
+            match and advances the counter to select a
+            different primitive polynomial.
+
+        </p>
+
+
+        <figure class="technical-figure">
+
+            <img
+                src="/assets/images/lfsr/lfsr-architecture.png"
+                alt="Polynomial-modulated Galois LFSR PRNG architecture"
+                loading="lazy"
+            >
+
+            <figcaption>
+                Proposed Galois LFSR PRNG architecture with
+                dynamic primitive-polynomial selection.
+            </figcaption>
+
+        </figure>
+
+    </div>
+
+</section>
+
+
+
+<!-- ========================================
+     02 ALGORITHM
+========================================= -->
+
+<section class="case-section">
+
+    <div class="container">
+
+        <div class="design-header">
+
+            <div>
+
+                <span class="design-number">
+                    02 — ALGORITHM
+                </span>
+
+                <h2>
+                    Polynomial Switching Algorithm
+                </h2>
+
+            </div>
+
+        </div>
+
+
+        <p class="design-intro">
+
+            The algorithm starts by loading the initial seed
+            and selecting a primitive polynomial.
+
+            The LFSR then generates a sequence until its
+            output returns to the seed value.
+
+            When a match is detected, the counter increments
+            and the multiplexer selects a new primitive
+            polynomial before sequence generation continues.
+
+        </p>
+
+
+        <figure class="technical-figure">
+
+            <img
+                src="/assets/images/lfsr/lfsr-algorithm-flow.png"
+                alt="Galois LFSR polynomial switching algorithm flowchart"
+                loading="lazy"
+            >
+
+            <figcaption>
+                Algorithm flow for sequence generation,
+                seed-match detection, and primitive-polynomial
+                switching.
+            </figcaption>
+
+        </figure>
+
+    </div>
+
+</section>
+
+
+
+<!-- ========================================
+     03 RTL DESIGN
+========================================= -->
+
+<section class="case-section case-section-light">
+
+    <div class="container">
+
+        <div class="design-header">
+
+            <div>
+
+                <span class="design-number">
+                    03 — RTL DESIGN
+                </span>
+
+                <h2>
+                    Modular RTL Implementation
+                </h2>
+
+            </div>
+
+        </div>
+
+
+        <p class="design-intro">
+
+            The design was implemented using modular RTL
+            blocks for the Galois LFSR, primitive-polynomial
+            generator, comparator, counter, and top-level
+            integration logic.
+
+            The architecture was designed to support different
+            LFSR widths by changing the primitive-polynomial
+            set and register width.
+
+        </p>
+
+    </div>
+
+</section>
+
+
+
+<!-- ========================================
+     04 FUNCTIONAL VERIFICATION
+========================================= -->
+
+<section class="case-section">
+
+    <div class="container">
+
+        <div class="design-header">
+
+            <div>
+
+                <span class="design-number">
+                    04 — FUNCTIONAL VERIFICATION
+                </span>
+
+                <h2>
+                    Sequence & Polynomial Switching Verification
+                </h2>
+
+            </div>
+
+        </div>
+
+
+        <p class="design-intro">
+
+            Functional verification checked reset behavior,
+            generated output sequences, seed-match detection,
+            counter operation, and primitive-polynomial
+            switching.
+        </p>
+
+
+        <figure class="technical-figure">
+
+            <img
+                src="/assets/images/lfsr/lfsr-waveform.png"
+                alt="8-bit LFSR polynomial switching simulation waveform"
+                loading="lazy"
+            >
+
+            <figcaption>
+                8-bit functional simulation showing sequence
+                completion and switching to a new primitive
+                polynomial.
+            </figcaption>
+
+        </figure>
+
+
+        <div class="result-summary">
+
+            <div>
+                <span>RESET</span>
+                <strong>Verified</strong>
+            </div>
+
+            <div>
+                <span>SEED MATCH</span>
+                <strong>Verified</strong>
+            </div>
+
+            <div>
+                <span>POLYNOMIAL SWITCH</span>
+                <strong>Verified</strong>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- ========================================
+     05 SYNTHESIS
+========================================= -->
+
+<section class="case-section case-section-light">
+
+    <div class="container">
+
+        <div class="design-header">
+
+            <div>
+
+                <span class="design-number">
+                    05 — LOGIC SYNTHESIS
+                </span>
+
+                <h2>
+                    ASIC-Oriented Logic Synthesis
+                </h2>
+
+            </div>
+
+        </div>
+
+
+        <p class="design-intro">
+
+            The RTL implementations were synthesized using
+            Cadence Genus with the Sky130 standard-cell
+            technology library.
+
+            Timing constraints were adjusted according to
+            design complexity to determine practical
+            operating frequencies.
+        </p>
+
+
+        <figure class="technical-figure">
+
+            <img
+                src="/assets/images/lfsr/lfsr-synthesis.png"
+                alt="8-bit LFSR logic synthesis and timing result"
+                loading="lazy"
+            >
+
+            <figcaption>
+                Synthesized 8-bit PRNG standard-cell netlist
+                and timing analysis at 0.8 GHz.
+            </figcaption>
+
+        </figure>
+
+
+        <div class="result-summary">
+
+            <div>
+                <span>DESIGN</span>
+                <strong>8-bit</strong>
+            </div>
+
+            <div>
+                <span>TARGET FREQUENCY</span>
+                <strong>0.8 GHz</strong>
+            </div>
+
+            <div>
+                <span>MAX PATH DELAY</span>
+                <strong>≈ 228 ps</strong>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- ========================================
+     06 RESULTS
+========================================= -->
+
+<section class="case-section">
+
+    <div class="container">
+
+        <div class="design-header">
+
+            <div>
+
+                <span class="design-number">
+                    06 — PPA & TIMING RESULTS
+                </span>
+
+                <h2>
+                    Performance Comparison
+                </h2>
+
+            </div>
+
+        </div>
+
+
+        <p class="design-intro">
+
+            Increasing the LFSR width increases the number
+            of registers and associated selection logic.
+
+            As a result, area and power consumption increase,
+            while the achievable maximum operating frequency
+            decreases.
+        </p>
+
+
+        <figure class="technical-figure">
+
+            <img
+                src="/assets/images/lfsr/lfsr-results.png"
+                alt="LFSR timing power and area comparison"
+                loading="lazy"
+            >
+
+            <figcaption>
+                Summary of power, area, and maximum operating
+                frequency for the 4-bit, 8-bit, and 16-bit
+                implementations.
+            </figcaption>
+
+        </figure>
+
+
+        <div class="lfsr-result-table">
+
+            <div class="result-row result-header">
+
+                <span>Design</span>
+                <span>Fmax</span>
+                <span>Power</span>
+                <span>Area</span>
+
+            </div>
+
+
+            <div class="result-row">
+
+                <span>4-bit</span>
+                <span>1.0 GHz</span>
+                <span>1.14 mW</span>
+                <span>926.517 µm²</span>
+
+            </div>
+
+
+            <div class="result-row">
+
+                <span>8-bit</span>
+                <span>0.8 GHz</span>
+                <span>1.906 mW</span>
+                <span>1767 µm²</span>
+
+            </div>
+
+
+            <div class="result-row">
+
+                <span>16-bit</span>
+                <span>0.7 GHz</span>
+                <span>3.04 mW</span>
+                <span>3258 µm²</span>
+
+            </div>
+
+        </div>
+
+
+        <div class="engineering-note">
+
+            <strong>
+                Engineering Observation
+            </strong>
+
+            <p>
+                Larger LFSR widths require additional
+                sequential and selection logic, increasing
+                area and power while reducing maximum
+                operating frequency.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- ========================================
+     NIST
+========================================= -->
+
+<section class="case-section case-section-light">
+
+    <div class="container">
+
+        <div class="case-section-title">
+
+            <span>
+                RANDOMNESS EVALUATION
+            </span>
+
+            <h2>
+                NIST SP 800-22
+            </h2>
+
+            <p>
+                Generated pseudo-random sequences were
+                evaluated using the NIST SP 800-22
+                statistical test suite as part of the
+                project methodology.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- ========================================
+     FOOTER
+========================================= -->
+
+<section class="case-footer">
+
+    <div class="container">
+
+        <p>
+            Explore the other semiconductor and digital
+            design projects in this portfolio.
+        </p>
+
+        <a href="/#projects">
+            ← BACK TO PROJECTS
+        </a>
+
+    </div>
+
+</section>
+
+
+</body>
+
+</html>
