@@ -151,7 +151,52 @@ a {
     color: #071a2b;
 }
 
+/* =========================================
+   ABOUT SECTION
+========================================= */
 
+.about-section {
+    padding: 85px 0;
+    background: #ffffff;
+}
+
+.about-content {
+    max-width: 900px;
+}
+
+.about-content p {
+    color: #586776;
+    font-size: 16px;
+    line-height: 1.8;
+    margin-bottom: 16px;
+}
+
+.about-focus {
+    margin-top: 28px;
+    padding: 22px 26px;
+
+    background: #f4f8fb;
+    border-left: 4px solid #1689e8;
+
+    border-radius: 0 8px 8px 0;
+}
+
+.about-focus span {
+    display: block;
+
+    color: #1689e8;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1.2px;
+
+    margin-bottom: 6px;
+}
+
+.about-focus strong {
+    color: #102235;
+    font-size: 16px;
+    line-height: 1.6;
+}
 /* =========================
    HERO IMAGE
 ========================= */
