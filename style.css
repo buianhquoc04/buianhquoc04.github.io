@@ -884,3 +884,70 @@ a {
     }
 
 }
+/* =========================================
+   LFSR PROJECT PAGE
+========================================= */
+
+.lfsr-summary {
+    grid-template-columns: repeat(4, 1fr);
+    margin-top: 40px;
+}
+
+
+.lfsr-result-table {
+    margin-top: 25px;
+
+    border: 1px solid #dce5ed;
+    border-radius: 8px;
+
+    overflow: hidden;
+}
+
+
+.result-row {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+
+    background: white;
+
+    border-bottom: 1px solid #dce5ed;
+}
+
+
+.result-row:last-child {
+    border-bottom: none;
+}
+
+
+.result-row span {
+    padding: 16px 18px;
+
+    color: #586776;
+
+    font-size: 14px;
+}
+
+
+.result-header {
+    background: #102235;
+}
+
+
+.result-header span {
+    color: white;
+
+    font-weight: 700;
+}
+
+
+@media (max-width: 800px) {
+
+    .lfsr-summary {
+        grid-template-columns: 1fr;
+    }
+
+    .result-row {
+        grid-template-columns: 1fr 1fr;
+    }
+
+}
