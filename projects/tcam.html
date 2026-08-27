@@ -1,0 +1,756 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>
+        TCAM Memory Circuit Design | Quoc Bui Anh
+    </title>
+
+    <meta
+        name="description"
+        content="Transistor-level TCAM cell and 8x8 TCAM array design with functional write and parallel search verification."
+    >
+
+    <link
+        rel="stylesheet"
+        href="/style.css"
+    >
+
+</head>
+
+
+<body>
+
+
+<!-- ========================================
+     NAVBAR
+========================================= -->
+
+<nav class="navbar">
+
+    <div class="container nav-container">
+
+        <a
+            href="/"
+            class="logo"
+        >
+            QB
+        </a>
+
+
+        <ul class="nav-links">
+
+            <li>
+                <a href="/">HOME</a>
+            </li>
+
+            <li>
+                <a href="/#projects">PROJECTS</a>
+            </li>
+
+            <li>
+                <a href="/#skills">SKILLS</a>
+            </li>
+
+            <li>
+                <a href="/#contact">CONTACT</a>
+            </li>
+
+        </ul>
+
+    </div>
+
+</nav>
+
+
+
+<!-- ========================================
+     HERO
+========================================= -->
+
+<section class="case-hero">
+
+    <div class="container">
+
+        <span class="case-category">
+            MEMORY CIRCUIT DESIGN
+        </span>
+
+
+        <h1>
+            TCAM Memory Circuit Design
+        </h1>
+
+
+        <p>
+            Transistor-level design and functional verification
+            of a TCAM cell and an 8×8 TCAM array, including
+            write, precharge, and parallel search/compare
+            operations.
+        </p>
+
+
+        <div class="case-tags">
+
+            <span>TCAM</span>
+
+            <span>8×8 Array</span>
+
+            <span>Transistor-Level Design</span>
+
+            <span>Functional Simulation</span>
+
+            <span>Content-Addressable Memory</span>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- ========================================
+     PROJECT CONTEXT
+========================================= -->
+
+<section class="case-section">
+
+    <div class="container">
+
+        <div class="case-section-title">
+
+            <span>
+                PROJECT CONTEXT
+            </span>
+
+
+            <h2>
+                Team Memory-Circuit Project
+            </h2>
+
+
+            <p>
+                This work was completed as part of a team
+                project covering SRAM and TCAM memory circuits.
+            </p>
+
+
+            <p>
+                My primary contribution focused on TCAM
+                circuit design and functional verification.
+                I also reviewed the operating principles of
+                the 6T SRAM cell as background for understanding
+                transistor-level memory structures.
+            </p>
+
+        </div>
+
+
+        <div class="tcam-scope-box">
+
+            <span>
+                PRIMARY CONTRIBUTION
+            </span>
+
+            <strong>
+                TCAM Cell & 8×8 TCAM Design / Verification
+            </strong>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- ========================================
+     01 TCAM CELL
+========================================= -->
+
+<section class="case-section case-section-light">
+
+    <div class="container">
+
+        <div class="design-header">
+
+            <div>
+
+                <span class="design-number">
+                    01 — TCAM CELL
+                </span>
+
+                <h2>
+                    Transistor-Level TCAM Architecture
+                </h2>
+
+            </div>
+
+        </div>
+
+
+        <p class="design-intro">
+
+            The TCAM cell combines a core storage cell,
+            a mask cell, and comparison circuitry.
+
+            In addition to storing binary values, the mask
+            mechanism allows the cell to represent the
+            ternary don't-care state used in content-based
+            searching.
+        </p>
+
+
+        <figure class="technical-figure">
+
+            <img
+                src="/assets/images/tcam/tcam-cell.png"
+                alt="Transistor-level schematic of a TCAM cell"
+                loading="lazy"
+            >
+
+            <figcaption>
+                Transistor-level schematic of the TCAM cell
+                including storage, mask, and comparison circuitry.
+            </figcaption>
+
+        </figure>
+
+    </div>
+
+</section>
+
+
+
+<!-- ========================================
+     02 OPERATION
+========================================= -->
+
+<section class="case-section">
+
+    <div class="container">
+
+        <div class="design-header">
+
+            <div>
+
+                <span class="design-number">
+                    02 — OPERATION
+                </span>
+
+                <h2>
+                    Write, Precharge & Compare Sequence
+                </h2>
+
+            </div>
+
+        </div>
+
+
+        <p class="design-intro">
+
+            TCAM operation is divided into three main stages:
+            writing the stored value, precharging the Match Line,
+            and comparing the search data against the stored data.
+
+            Before comparison, the Match Line is precharged high.
+            A matching cell keeps the Match Line high, while a
+            mismatch activates a discharge path toward ground.
+        </p>
+
+
+        <figure class="technical-figure">
+
+            <img
+                src="/assets/images/tcam/tcam-operation.png"
+                alt="TCAM write precharge and compare timing sequence"
+                loading="lazy"
+            >
+
+            <figcaption>
+                Timing sequence showing the write, precharge,
+                and comparison phases of TCAM operation.
+            </figcaption>
+
+        </figure>
+
+
+        <div class="result-summary">
+
+            <div>
+
+                <span>
+                    WRITE
+                </span>
+
+                <strong>
+                    Store Core / Mask
+                </strong>
+
+            </div>
+
+
+            <div>
+
+                <span>
+                    PRECHARGE
+                </span>
+
+                <strong>
+                    HL → High
+                </strong>
+
+            </div>
+
+
+            <div>
+
+                <span>
+                    COMPARE
+                </span>
+
+                <strong>
+                    Match / Miss
+                </strong>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- ========================================
+     03 FUNCTIONAL CASES
+========================================= -->
+
+<section class="case-section case-section-light">
+
+    <div class="container">
+
+        <div class="design-header">
+
+            <div>
+
+                <span class="design-number">
+                    03 — FUNCTIONAL CASES
+                </span>
+
+                <h2>
+                    Match, Miss & Ternary Behavior
+                </h2>
+
+            </div>
+
+        </div>
+
+
+        <p class="design-intro">
+
+            Multiple functional cases were evaluated to
+            verify normal MATCH and MISS conditions together
+            with the ternary behaviors enabled by the mask cell.
+        </p>
+
+
+        <figure class="technical-figure">
+
+            <img
+                src="/assets/images/tcam/tcam-cases.png"
+                alt="TCAM functional match miss and ternary test cases"
+                loading="lazy"
+            >
+
+            <figcaption>
+                Functional verification cases covering MATCH,
+                MISS, always-match, and always-miss behavior.
+            </figcaption>
+
+        </figure>
+
+
+        <div class="result-summary">
+
+            <div>
+
+                <span>
+                    MATCH
+                </span>
+
+                <strong>
+                    HL = 1
+                </strong>
+
+            </div>
+
+
+            <div>
+
+                <span>
+                    MISS
+                </span>
+
+                <strong>
+                    HL = 0
+                </strong>
+
+            </div>
+
+
+            <div>
+
+                <span>
+                    TERNARY
+                </span>
+
+                <strong>
+                    0 / 1 / X
+                </strong>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- ========================================
+     04 8X8 ARRAY
+========================================= -->
+
+<section class="case-section">
+
+    <div class="container">
+
+        <div class="design-header">
+
+            <div>
+
+                <span class="design-number">
+                    04 — ARRAY DESIGN
+                </span>
+
+                <h2>
+                    8×8 TCAM Array
+                </h2>
+
+            </div>
+
+        </div>
+
+
+        <p class="design-intro">
+
+            The verified TCAM cell architecture was extended
+            into an 8×8 array to evaluate multi-row storage
+            and parallel content searching.
+
+            Each row provides a Match Line that indicates
+            whether the stored word matches the applied
+            search data.
+        </p>
+
+
+        <figure class="technical-figure">
+
+            <img
+                src="/assets/images/tcam/tcam-8x8-array.png"
+                alt="8 by 8 TCAM schematic array"
+                loading="lazy"
+            >
+
+            <figcaption>
+                Schematic architecture of the 8×8 TCAM array
+                and associated stimulus sources.
+            </figcaption>
+
+        </figure>
+
+    </div>
+
+</section>
+
+
+
+<!-- ========================================
+     05 WRITE VERIFICATION
+========================================= -->
+
+<section class="case-section case-section-light">
+
+    <div class="container">
+
+        <div class="design-header">
+
+            <div>
+
+                <span class="design-number">
+                    05 — WRITE VERIFICATION
+                </span>
+
+                <h2>
+                    Multi-Row Data Storage
+                </h2>
+
+            </div>
+
+        </div>
+
+
+        <p class="design-intro">
+
+            Functional simulation was performed by writing
+            different data patterns into selected TCAM rows.
+
+            The wordline and bitline control signals were
+            sequenced to program the core and mask cells
+            before entering the search phase.
+        </p>
+
+
+        <figure class="technical-figure">
+
+            <img
+                src="/assets/images/tcam/tcam-write.png"
+                alt="8 by 8 TCAM write simulation"
+                loading="lazy"
+            >
+
+            <figcaption>
+                Functional simulation of the write stage for
+                selected rows in the 8×8 TCAM array.
+            </figcaption>
+
+        </figure>
+
+
+        <div class="tcam-patterns">
+
+            <div>
+                <span>ROW 1</span>
+                <strong>0000 0001</strong>
+            </div>
+
+            <div>
+                <span>ROW 3</span>
+                <strong>0000 0011</strong>
+            </div>
+
+            <div>
+                <span>ROW 5</span>
+                <strong>1111 1110</strong>
+            </div>
+
+            <div>
+                <span>ROW 7</span>
+                <strong>1111 1100</strong>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- ========================================
+     06 SEARCH VERIFICATION
+========================================= -->
+
+<section class="case-section">
+
+    <div class="container">
+
+        <div class="design-header">
+
+            <div>
+
+                <span class="design-number">
+                    06 — SEARCH VERIFICATION
+                </span>
+
+                <h2>
+                    Parallel Search & Compare
+                </h2>
+
+            </div>
+
+        </div>
+
+
+        <p class="design-intro">
+
+            After writing the selected rows, the Match Lines
+            were precharged and search patterns were applied
+            to the entire array.
+
+            During a successful search, the matching row
+            retains its Match Line at logic high while the
+            mismatched rows discharge to logic low.
+        </p>
+
+
+        <figure class="technical-figure">
+
+            <img
+                src="/assets/images/tcam/tcam-search.png"
+                alt="8 by 8 TCAM parallel search and compare simulation"
+                loading="lazy"
+            >
+
+            <figcaption>
+                Parallel search simulation showing Match-Line
+                behavior for matching and mismatching rows.
+            </figcaption>
+
+        </figure>
+
+
+        <div class="result-summary">
+
+            <div>
+
+                <span>
+                    ROW 3 SEARCH
+                </span>
+
+                <strong>
+                    HL[3] = MATCH
+                </strong>
+
+            </div>
+
+
+            <div>
+
+                <span>
+                    ROW 5 SEARCH
+                </span>
+
+                <strong>
+                    HL[5] = MATCH
+                </strong>
+
+            </div>
+
+
+            <div>
+
+                <span>
+                    NON-STORED DATA
+                </span>
+
+                <strong>
+                    No Match
+                </strong>
+
+            </div>
+
+        </div>
+
+
+        <div class="engineering-note">
+
+            <strong>
+                Verification Result
+            </strong>
+
+            <p>
+                The 8×8 TCAM successfully identified stored
+                search patterns by preserving the Match Line
+                of the corresponding row while discharging
+                mismatched rows.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- ========================================
+     FUTURE WORK
+========================================= -->
+
+<section class="case-section case-section-light">
+
+    <div class="container">
+
+        <div class="case-section-title">
+
+            <span>
+                FUTURE WORK
+            </span>
+
+
+            <h2>
+                Match-Line Sensing & Priority Encoding
+            </h2>
+
+
+            <p>
+                Further development could integrate a
+                Match-Line Sense Amplifier to detect small
+                Match-Line voltage differences more quickly
+                in larger arrays.
+            </p>
+
+
+            <p>
+                A priority encoder could also be added to
+                convert multiple Match-Line outputs into a
+                compact binary address when more than one
+                row matches the search pattern.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- ========================================
+     FOOTER
+========================================= -->
+
+<section class="case-footer">
+
+    <div class="container">
+
+        <p>
+            Explore the other semiconductor and digital
+            design projects in this portfolio.
+        </p>
+
+        <a href="/#projects">
+            ← BACK TO PROJECTS
+        </a>
+
+    </div>
+
+</section>
+
+
+</body>
+
+</html>
