@@ -951,3 +951,103 @@ a {
     }
 
 }
+/* =========================================
+   TCAM PROJECT PAGE
+========================================= */
+
+.tcam-scope-box {
+    margin-top: 32px;
+
+    padding: 22px 26px;
+
+    border-left: 4px solid #1689e8;
+
+    background: #f3f8fc;
+
+    border-radius: 0 8px 8px 0;
+}
+
+
+.tcam-scope-box span {
+    display: block;
+
+    color: #1689e8;
+
+    font-size: 11px;
+
+    font-weight: 700;
+
+    letter-spacing: 1.2px;
+
+    margin-bottom: 6px;
+}
+
+
+.tcam-scope-box strong {
+    color: #102235;
+
+    font-size: 17px;
+}
+
+
+.tcam-patterns {
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    margin-top: 20px;
+
+    border: 1px solid #dce5ed;
+
+    border-radius: 8px;
+
+    overflow: hidden;
+}
+
+
+.tcam-patterns div {
+    padding: 18px;
+
+    background: white;
+
+    border-right:
+        1px solid #dce5ed;
+}
+
+
+.tcam-patterns div:last-child {
+    border-right: none;
+}
+
+
+.tcam-patterns span {
+    display: block;
+
+    color: #7b8996;
+
+    font-size: 11px;
+
+    font-weight: 700;
+
+    margin-bottom: 5px;
+}
+
+
+.tcam-patterns strong {
+    color: #102235;
+
+    font-size: 15px;
+
+    letter-spacing: 1px;
+}
+
+
+@media (max-width: 800px) {
+
+    .tcam-patterns {
+        grid-template-columns:
+            1fr 1fr;
+    }
+
+}
